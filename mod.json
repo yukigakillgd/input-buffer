@@ -1,0 +1,31 @@
+{
+	"geode": "6.0.0",
+	"gd": {
+		"win": "2.2091"
+	},
+	"version": "v1.0.0",
+	"id": "local.input-buffer",
+	"name": "Input Buffer",
+	"developer": "you",
+	"description": "Buffers early jump inputs so orbs and landings fire on the first physics step they are possible.",
+	"settings": {
+		"enabled": {
+			"type": "bool",
+			"name": "Enabled",
+			"description": "Turn the input buffer on or off.",
+			"default": true
+		},
+		"window-steps": {
+			"type": "int",
+			"name": "Buffer window (physics steps)",
+			"description": "How long an early press stays buffered. One step is 1/240 s at the default 240 TPS (12 steps = 50 ms). Scales with TPS if you change it.",
+			"default": 6,
+			"min": 1,
+			"max": 48,
+			"control": {
+				"input": true,
+				"slider": true
+			}
+		}
+	}
+}
